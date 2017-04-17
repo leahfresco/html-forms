@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<head>
+  <title>Ubermelon Order Form</title>
+</head>
+<body>
+  <h1> Order! </h1>
+  <h3> Prices </h3>
+  <table class="prices table">
+    <tr>
+      <th>Melon Name</th>
+      <th>Prices per lb.</th>
+    </tr>
+    <tr>
+      <td>Watermelon</td>
+      <td>$1.59</td>
+    </tr>
+    <tr>
+      <td>Honeydew</td>
+      <td>$0.99</td
+      </tr>
+      <tr>
+        <td>Canteloupe</td>
+        <td>$1.29</td>
+      </tr>
+      <tr>
+        <td>Crewnshaw</td>
+        <td>$2.19</td>
+      </tr>
+      <tr>
+        <td>Canary</td>
+        <td>$11.99</td>
+      </tr>
+    </table>
+
+    <p>Place your orders here! You know you want to.</p>
+
+    <form class="orderform" action="https://ubermelon-order-form.herokuapp.com/process" method="POST">
+      <p>First Name: <input type="text" name="firstname"></p>
+      <p>Last Name: <input type="text" name="lastname"></p>
+      <p>Melon Type:
+            <select name="melontype">
+              <option value="watermelon">Watermelon</option>
+              <option value="honeydew">Honeydew</option>
+              <option value="canteloupe">Canteloupe</option>
+              <option value="crenshaw">Crenshaw</option>
+              <option value="canary">Canary</option>
+            </select></p>
+      <p>Quantity*: <input type="text" name="quantity"></p>
+      <p>Delivery Time:
+            <input type="radio" name="time" value="am"> 12:00am-12:00pm
+            <input type="radio" name="time" value="pm"> 12:00pm-12:00am
+            <input type="radio" name="time" value="wat"> Time is an illusion</p>
+      <p>Returning customer?
+            <input type="radio" name="returning" value="yes"> Yes
+            <input type="radio" name="returning" value="no"> No</p>
+      <p>For Statistical Purposes:
+            <input type="checkbox" name="stats" value="dog"> Dog
+            <input type="checkbox" name="stats" value="cat"> Cat
+            <input type="checkbox" name="stats" value="hedgehog"> Hedgehog
+            <input type="checkbox" name="stats" value="balloon"> Balloonicorn
+            <input type="checkbox" name="stats" value="yak"> Yak</p>
+      <p><input type="submit" value="Submit"></p>
+
+    </form>
+      <footer>*Quantities are given by the flat.</footer>
+
+  </body>
+  </html>
